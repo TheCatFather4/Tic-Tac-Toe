@@ -2,7 +2,7 @@
 
 ## About
 Tic-Tac-Toe is a classic game that many people enjoy. 
-This repository features a rendition of the game written in the
+This repository features a console application rendition of the game written in the
 C# programming language.
 
 ## Key Features
