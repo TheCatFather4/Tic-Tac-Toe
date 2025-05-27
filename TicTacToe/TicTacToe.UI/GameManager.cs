@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TicTacToe.UI.Implementations;
+﻿using TicTacToe.UI.Enums;
 using TicTacToe.UI.Interfaces;
 
 namespace TicTacToe.UI
@@ -51,19 +46,19 @@ namespace TicTacToe.UI
 
         public PlacementAttempt WinConditionCheck(string[] postion, string symbol)
         {
-            if (position[0] == symbol && position[1] == symbol && position[2] == symbol || //Horizontal
+            if (position[0] == symbol && position[1] == symbol && position[2] == symbol || 
                 position[3] == symbol && position[4] == symbol && position[5] == symbol ||
                 position[6] == symbol && position[7] == symbol && position[8] == symbol)
             {
                 return WinResult(symbol);
             }
-            else if (position[0] == symbol && position[3] == symbol && position[6] == symbol || //Vertical
+            else if (position[0] == symbol && position[3] == symbol && position[6] == symbol || 
                      position[1] == symbol && position[4] == symbol && position[7] == symbol ||
                      position[2] == symbol && position[5] == symbol && position[8] == symbol)
             {
                 return WinResult(symbol);
             }
-            else if (position[0] == symbol && position[4] == symbol && position[8] == symbol || //Diagonal
+            else if (position[0] == symbol && position[4] == symbol && position[8] == symbol || 
                      position[2] == symbol && position[4] == symbol && position[6] == symbol)
             {
                 return WinResult(symbol);

@@ -1,10 +1,12 @@
-﻿using System.ComponentModel;
-using TicTacToe.UI;
+﻿using TicTacToe.UI;
+using TicTacToe.UI.Enums;
 using TicTacToe.UI.Interfaces;
 
 Console.WriteLine("Welcome to Tic-Tac-Toe!");
+
 IPlayer player1 = PlayerFactory.GeneratePlayer("Player 1 (X) - Human or Computer? (H/C): "); 
 IPlayer player2 = PlayerFactory.GeneratePlayer("Player 2 (O) - Human or Computer? (H/C): "); 
+
 GameManager gmr = new GameManager(player1, player2);
 
 IPlayer currentTurn = ConsoleIO.WhoGoesFirst(player1, player2);
@@ -14,7 +16,7 @@ Console.WriteLine($"\n{currentTurn.symbol} will go first!");
 ConsoleIO.GridInstructions();
 
 PlacementAttempt win;
-do //game loop
+do
 {
     currentTurn.GenerateChoice();
     PlacementAttempt result = gmr.ReportResult(currentTurn.choice);

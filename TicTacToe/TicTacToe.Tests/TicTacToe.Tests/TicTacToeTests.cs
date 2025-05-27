@@ -1,6 +1,6 @@
-﻿using Microsoft.VisualStudio.TestPlatform.ObjectModel;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using TicTacToe.UI;
+using TicTacToe.UI.Enums;
 using TicTacToe.UI.Implementations;
 using TicTacToe.UI.Interfaces;
 
@@ -8,9 +8,6 @@ namespace TicTacToe.Tests
 {
     public class TicTacToeTests
     {
-
-        // Test Methods
-
         public PlacementAttempt XWins_Row(int a, int b, int c)
         {
             IPlayer p1 = new HumanPlayer();
@@ -112,8 +109,6 @@ namespace TicTacToe.Tests
             p2.choice = position;
             return gmr.ReportResult(p2.choice);
         }
-
-        // Unit Tests
 
         [Test]
         public void XO_Win_Vertical()
